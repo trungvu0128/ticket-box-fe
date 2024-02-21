@@ -1,11 +1,20 @@
-import { Flex, Typography, Image, Input, Checkbox } from "antd";
+import {
+  Flex,
+  Typography,
+  Input,
+  Checkbox,
+  Space,
+  Button,
+  Divider,
+} from "antd";
 import React from "react";
+import { AiFillMail } from "react-icons/ai";
 export const Login = () => {
   return (
     <div>
       <Flex justify="center" align="center">
         <Flex
-          gap={50}
+          gap={100}
           align="flex-end"
           justify="center"
           style={{
@@ -132,16 +141,49 @@ export const Login = () => {
         </Flex>
       </Flex>
       <Flex
+        vertical
+        gap={30}
         style={{
-          marginLeft: "35%",
-          marginRight: "35%",
+          marginLeft: "40%",
+          marginRight: "40%",
           marginTop: 20,
+          background: "#fff",
+          border: 10,
+          padding: 20,
         }}
       >
-        <Typography.Text>Input your phone number</Typography.Text>
-        <Input placeholder="input your phone number" />
-        <Flex>
-          <Checkbox></Checkbox>
+        <Flex vertical gap={5}>
+          <Typography.Text>Input your phone number</Typography.Text>
+          <Space.Compact>
+            <Input addonBefore={"+84"} placeholder="input your phone number" />
+          </Space.Compact>
+        </Flex>
+        <Checkbox>
+          I agree to Ticketbox's Terms of Use and Information Privacy Policy
+        </Checkbox>
+        <Button disabled>Continue</Button>
+        <Divider orientation="center" style={{ margin: 0 }}>
+          Or
+        </Divider>
+        <Flex gap={50} justify="center" align="center">
+          <Button
+            shape="circle"
+            style={{ borderRadius: "1px solid black", width: 40, height: 40 }}
+          >
+            <AiFillMail height={50} />
+          </Button>
+          <Button
+            shape="circle"
+            style={{ borderRadius: "1px solid black", width: 40, height: 40 }}
+          >
+            <AiFillMail height={50} />
+          </Button>
+          <Button
+            shape="circle"
+            style={{ borderRadius: "1px solid black", width: 40, height: 40 }}
+          >
+            <AiFillMail height={50} />
+          </Button>
         </Flex>
       </Flex>
     </div>

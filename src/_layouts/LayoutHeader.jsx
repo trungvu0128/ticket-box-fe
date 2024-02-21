@@ -3,6 +3,7 @@ import { Header } from "antd/es/layout/layout";
 import Search from "antd/es/input/Search";
 import { FaTicketSimple } from "react-icons/fa6";
 import icon from "../icon.png";
+import { useNavigate } from "react-router-dom";
 const headerCSSProperties = {
   borderBottom: "2px solid rgb(230, 235, 245)",
   height: "76px",
@@ -22,6 +23,7 @@ const divNavCssProperties = {
 };
 
 function LayoutHeader() {
+  let navigate = useNavigate();
   return (
     <Header style={headerCSSProperties}>
       <Flex
@@ -43,7 +45,9 @@ function LayoutHeader() {
           <Button type="text" size="large">
             <FaTicketSimple />
           </Button>
-          <Button size="large">Login | Sign up</Button>
+          <Button onClick={() => navigate("/login")} size="large">
+            Login | Sign up
+          </Button>
         </Flex>
       </Flex>
     </Header>

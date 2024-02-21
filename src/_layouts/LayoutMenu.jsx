@@ -6,7 +6,7 @@ function LayoutMenu({ items }) {
     <Menu
       items={items}
       defaultSelectedKeys={["1"]}
-      style={{ background: backgroundColor, border: "none" }}
+      style={{ background: backgroundColor, border: "none", fontSize: "12px" }}
     ></Menu>
   );
 }
